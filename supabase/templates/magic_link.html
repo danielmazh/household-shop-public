@@ -1,0 +1,22 @@
+<!--
+  Supabase Auth > Email Templates > Magic Link (spec 011). Applied by hand in the dashboard.
+  The app sends options.data.lang ("he" or "en"). Supabase keeps it in the user metadata,
+  which the template reads as .Data. No lang (users from before spec 011): Hebrew.
+  printf "%v" turns a missing lang into a string that is not "en", so eq never gets a nil value.
+  Subject: {{ if eq (printf "%v" .Data.lang) "en" }}Sign in to Home Shopping{{ else }}כניסה לקניות לבית{{ end }}
+-->
+{{ if eq (printf "%v" .Data.lang) "en" }}
+<div dir="ltr" lang="en" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5">
+  <h2>Sign in to Home Shopping</h2>
+  <p><a href="{{ .ConfirmationURL }}">Tap here to sign in</a></p>
+  <p>Or type this code in the app: <strong>{{ .Token }}</strong></p>
+  <p style="color: #5f6863">The link and the code work once and expire soon. Did not ask to sign in? You can ignore this email.</p>
+</div>
+{{ else }}
+<div dir="rtl" lang="he" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5">
+  <h2>כניסה לקניות לבית</h2>
+  <p><a href="{{ .ConfirmationURL }}">לחצו כאן כדי להיכנס</a></p>
+  <p>או הקלידו באפליקציה את הקוד: <strong>{{ .Token }}</strong></p>
+  <p style="color: #5f6863">הקישור והקוד עובדים פעם אחת ותוקפם קצר. לא ביקשתם להיכנס? אפשר להתעלם מהמייל.</p>
+</div>
+{{ end }}

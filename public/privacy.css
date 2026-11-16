@@ -1,0 +1,7 @@
+body{margin:0;background:#f6f7f5;color:#1d2a22;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:1.6rem;margin:0 0 4px;color:#2f6f4f}
+h2{font-size:1.15rem;margin:28px 0 6px}
+section+section{border-top:1px solid #d5ddd7;margin-top:40px;padding-top:24px}
+.date{color:#5b6b61;margin:0 0 16px}
+a{color:#2f6f4f}

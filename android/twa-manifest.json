@@ -1,0 +1,45 @@
+{
+  "packageId": "com.danielmazh.householdshop",
+  "host": "household-shop.pages.dev",
+  "name": "קניות לבית",
+  "launcherName": "קניות",
+  "display": "standalone",
+  "orientation": "portrait",
+  "themeColor": "#2f6f4f",
+  "themeColorDark": "#2f6f4f",
+  "navigationColor": "#2f6f4f",
+  "navigationColorDark": "#2f6f4f",
+  "navigationDividerColor": "#00000000",
+  "navigationDividerColorDark": "#00000000",
+  "backgroundColor": "#f6f7f5",
+  "enableNotifications": false,
+  "startUrl": "/",
+  "iconUrl": "https://household-shop.pages.dev/icon-512.png",
+  "maskableIconUrl": "https://household-shop.pages.dev/icon-maskable-512.png",
+  "webManifestUrl": "https://household-shop.pages.dev/manifest.webmanifest",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "~/.config/household-shop/android/upload-keystore.jks",
+    "alias": "upload"
+  },
+  "appVersionCode": 1,
+  "appVersion": "1.0.0",
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": { "enabled": false },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://household-shop.pages.dev/",
+  "minSdkVersion": 24,
+  "fingerprints": [
+    {
+      "name": "upload",
+      "value": "5E:CE:77:51:9F:1A:C4:68:F1:0A:5B:CA:D0:AD:E9:00:AF:3B:7D:6B:57:CC:9E:CE:03:F5:4A:CB:28:A6:F1:10"
+    }
+  ],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": []
+}

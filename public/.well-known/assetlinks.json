@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.danielmazh.householdshop",
+      "sha256_cert_fingerprints": [
+        "5E:CE:77:51:9F:1A:C4:68:F1:0A:5B:CA:D0:AD:E9:00:AF:3B:7D:6B:57:CC:9E:CE:03:F5:4A:CB:28:A6:F1:10",
+        "2D:27:B6:2D:86:75:F8:99:28:A8:D7:E6:01:6F:84:55:56:6A:09:E0:DA:86:B5:49:74:3F:3E:AF:7C:C8:21:57"
+      ]
+    }
+  }
+]

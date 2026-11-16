@@ -1,0 +1,21 @@
+<!--
+  Supabase Auth > Email Templates > Confirm signup (spec 011). Applied by hand in the dashboard.
+  A first sign-in with an email Supabase does not know yet gets this email, not the magic link one.
+  The app sends options.data.lang ("he" or "en"); the template reads it as .Data. No lang: Hebrew (printf "%v" makes a missing lang safe for eq).
+  Subject: {{ if eq (printf "%v" .Data.lang) "en" }}Welcome to Home Shopping{{ else }}ברוכים הבאים לקניות לבית{{ end }}
+-->
+{{ if eq (printf "%v" .Data.lang) "en" }}
+<div dir="ltr" lang="en" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5">
+  <h2>Welcome to Home Shopping</h2>
+  <p><a href="{{ .ConfirmationURL }}">Tap here to confirm your email and sign in</a></p>
+  <p>Or type this code in the app: <strong>{{ .Token }}</strong></p>
+  <p style="color: #5f6863">The link and the code work once and expire soon. Did not ask to sign up? You can ignore this email.</p>
+</div>
+{{ else }}
+<div dir="rtl" lang="he" style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5">
+  <h2>ברוכים הבאים לקניות לבית</h2>
+  <p><a href="{{ .ConfirmationURL }}">לחצו כאן כדי לאשר את המייל ולהיכנס</a></p>
+  <p>או הקלידו באפליקציה את הקוד: <strong>{{ .Token }}</strong></p>
+  <p style="color: #5f6863">הקישור והקוד עובדים פעם אחת ותוקפם קצר. לא נרשמתם? אפשר להתעלם מהמייל.</p>
+</div>
+{{ end }}
